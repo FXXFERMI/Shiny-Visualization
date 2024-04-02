@@ -6,7 +6,7 @@ This Shiny app provides an interactive visualization of the ethnic origins and n
 
 # Website Link
 
-<https://github.com/FXXFERMI/Shiny-Visualization.git>
+<https://siqi-fei.shinyapps.io/Holocaust_Victims/>
 
 # Features
 
