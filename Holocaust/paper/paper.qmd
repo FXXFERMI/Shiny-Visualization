@@ -1,0 +1,72 @@
+---
+title: "Navigating Ethics and Engagement in Visualizing the Holocaust through a Shiny App"
+author: 
+  - Siqi Fei
+thanks: "Link to the Shiny App: <https://siqi-fei.shinyapps.io/Holocaust_Victims/> Code and data are available at: <https://github.com/FXXFERMI/Shiny-Visualization.git>."
+date: "March 28, 2024"
+date-format: long
+abstract: ""
+format: pdf
+number-sections: true
+toc: true
+bibliography: references.bib
+header-includes:
+  \usepackage{placeins}
+---
+
+# Introduction
+
+This essay discusses a delicate issue: how to represent the massive human loss from events like the Holocaust and slavery in numbers. We explore this through a specific project, a Shiny app, created to show the backgrounds and numbers of people who lost their lives at Auschwitz, one of the Holocaust's most infamous concentration camps. The app, inspired by the themes discussed in Jamelle Bouie's insightful 2022 article [@citeBouie2022], "We Still Can't See American Slavery for What It Was," aims not just to quantify the atrocities but to honor the memory of those who perished. Bouie's exploration into the quantification of human life during the trans-Atlantic slave trade offers a poignant backdrop to our endeavor, highlighting the delicate balance between statistical representation and the preservation of individual humanity. By drawing parallels between the representation of slavery and the Holocaust, this project endeavors to contribute to our understanding of these historical atrocities, emphasizing the importance of remembrance and the ethical considerations in digital history projects. This essay will discuss the development and implications of the Shiny app, reflecting on how digital tools can help us remember, represent, and learn from the past, ensuring that the magnitude of such tragedies is both comprehended and felt.
+
+# Data
+
+In the Shiny APP, we used data set from United States Holocaust Memorial Museum 2024 [@ushmm2024]. It offers an interactive exploration of Auschwitz victims, segmented by ethnic origins and numbers. This APP transforms raw data from Auschwitz Death Certificates of 1942-1943 into a user-engaging format, allowing users to delve into the specifics by selecting groups of interest based on birthplace or religion.
+
+we worked with in R [@citeR], a language for statistical computing. The `tidyverse` suite [@citetidyverse], with its various packages like `ggplot2` [@citeggplot2], `dplyr` [@citedplyr], `readr` [@citereadr], and `tibble` [@citetibble], made handling the data easier and more precise. The `shiny` [@citeShiny] and `DT` [@citeDT] packages were used to create the server of the Holocaust_Victims APP.
+
+## **Preparation and Ethical Approach**
+
+In preparing this data set, ethical considerations were paramount. We aimed to present the victims not merely as numbers but as individuals, ensuring their dignified remembrance. This approach aligns with themes from Bouie [@citeBouie2022], emphasizing the importance of respectful representation in historical analysis.
+
+## **Data Clean**
+
+The cleaning process involved several crucial steps:
+
+-   **Removing NA Values**: Any rows containing NA values, which indicate missing data, were omitted to ensure the data set's completeness.
+
+-   **Eliminating Placeholder Text**: Rows containing placeholders such as "..." or "---", which could distort analysis, were carefully filtered out.
+
+-   **Stripping Leading Characters**: Entries beginning with a single quote, potentially indicating formatting issues, were also removed.
+
+This rigorous cleaning ensured that the data set was devoid of common data issues that could skew the app's outputs or user experience.
+
+## **Implementation in the Shiny App**
+
+The Shiny app leverages the **`ggplot2`**, **`DT`**, and **`shiny`** libraries to create a user-friendly interface that encourages exploration and learning.
+
+The interactive graph, utilizing a pie chart format, represents the proportion of victims from different categories, enhancing the visual appeal and comprehensibility of the data. Meanwhile, the interactive table offers a detailed view, allowing for an in-depth examination of the filtered data set.
+
+Furthermore, the interactive table has been augmented to provide a detailed view that encompasses the full spectrum of the data set, including victims' birthdays or regions. This allows users to conduct an in-depth examination of the filtered data set, offering insights into the demographics of the victims and the geographical breadth of the Holocaust's impact. By enabling this granular level of exploration, the app facilitates a more personalized and meaningful interaction with the data, encouraging users to uncover stories and patterns that might be obscured in broader analyses.
+
+# Discussion
+
+This discussion navigates the intersection of digital technology, historical memory, and ethical representation, drawing from the themes of Jamelle Bouie’s 2022 article [@citeBouie2022] and the meticulous approach to data handling and visualization.
+
+## **Enhancing Historical Understanding Through Interactive Tools**
+
+By allowing users to explore data based on specific categories, such as birthplace, religion, birthdays, or regions, the app personalizes the historical narrative, connecting users to the individual stories within the broader tragedy. This level of interaction encourages a deeper engagement with history, fostering a more nuanced understanding of the Holocaust's impact across different demographics and geographies.
+
+## **Bridging Past and Present**
+
+The project exemplifies the potential of digital tools to bridge the gap between historical events and contemporary audiences. By making the data accessible and interactive, the app invites users to engage with history actively, promoting a form of digital literacy that is increasingly crucial in a world saturated with information. This engagement is not passive but requires users to question, explore, and reflect, thereby fostering a critical understanding of history's relevance to the present.
+
+## **Future Directions and Considerations**
+
+Looking ahead, the project highlights the need for ongoing dialogue about the use of technology in historical representation. As digital tools evolve, so too will the methods for visualizing and interacting with historical data. This progress brings opportunities for innovation but also ethical challenges, particularly in how we balance technological capabilities with the respectful treatment of sensitive subjects. Future projects will need to continue grappling with these questions, ensuring that as we develop new ways to explore history, we remain committed to ethical standards that honor the memory of those we seek to remember.
+
+# Conclusion
+
+The development of the Shiny app for visualizing the Holocaust victims’ data, set against the backdrop of Jamelle Bouie’s critical insights, offers a profound exploration of the ethics, challenges, and potentials at the intersection of history, technology, and memory. This project not only contributes to our understanding of the Holocaust but also exemplifies the thoughtful application of digital tools in historical scholarship. As we move forward, the lessons learned here will undoubtedly inform future endeavors in digital history, emphasizing the importance of ethical consideration, user engagement, and the perpetual relevance of the past to our present and future.
+
+\newpage
+# References
