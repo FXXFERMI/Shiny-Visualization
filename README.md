@@ -4,6 +4,10 @@
 
 This Shiny app provides an interactive visualization of the ethnic origins and numbers of Holocaust victims, specifically focusing on those murdered at Auschwitz concentration camp. Drawing inspiration from Jamelle Bouie's 2022 article on the quantification of human tragedies, this project aims to honor the memory of the victims by presenting a dignified representation of the data, allowing users to explore specific groups based on categories such as birthplace, religion, birthdays, or regions.
 
+# Website Link
+
+<https://github.com/FXXFERMI/Shiny-Visualization.git>
+
 # Features
 
 -   Interactive Graphs: Utilize pie charts to display the proportion of victims from different categories.
